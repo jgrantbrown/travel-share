@@ -1,0 +1,14 @@
+<h1>Log in here!</h1>
+  <%= form_for @user, url: sessions_path(@user), method: :post do |f|%>
+
+  <%=f.label "User Name"%></br>
+  <%= f.text_field :username%> </br>
+
+  <%=f.label "Password" %></br>
+  <%= f.password_field :password%> </br>
+
+  <%= f.submit "Continue your travel journey!"%></br>
+
+<% end %>
+
+<%= link_to "Sign Up", new_user_path %>
