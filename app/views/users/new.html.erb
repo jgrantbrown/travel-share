@@ -1,0 +1,30 @@
+<h1>Create an Account</h1>
+<%= form_for(@user) do |f|%>
+
+  <%=f.label "User Name"%></br>
+  <%= f.text_field :username%> </br>
+
+  <%=f.label "First Name"%></br>
+  <%= f.text_field :first_name%> </br>
+
+  <%=f.label "Last Name"%></br>
+  <%= f.text_field :last_name%> </br>
+
+  <%=f.label "Email" %></br>
+  <%= f.email_field :email%></br>
+
+
+    <%=f.label "About Me:" %></br>
+    <%= f.text_area :bio%></br>
+
+  <%=f.label "Password" %></br>
+  <%= f.password_field :password%> </br>
+
+  <%=f.label "Password Confirmation" %></br>
+  <%= f.password_field :password_confirmation%> </br>
+
+
+  <%= f.submit "Start your travel journey!"%></br>
+
+
+<%end %>
