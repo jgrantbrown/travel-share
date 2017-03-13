@@ -1,5 +1,5 @@
 /* Bordered form */
-h1 {
+.header {
   color: green;
   text-align: center;
   font-size: 300%;
@@ -20,61 +20,4 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-family: "Arial Black", Gadget, sans-s
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding:5px 5px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
-}
-
-
-
-/* Add padding to containers */
-.container {
-    padding: 16px;
-}
-
-
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-
-}
-
-p {
-  font-size: 120%;
-  font-family: "Arial Black", Gadget, sans-serif;
-  color: green;
-}
-
-
-body {
-
-   background-color: #FEFEF2
-
-
-
-}
-
-
-
-h2 {
- font-size: 200%;
- font-family: "Arial Black", Gadget, sans-serif
-
 }
