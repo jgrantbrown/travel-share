@@ -16,10 +16,10 @@
         <tr>
           <th>City (Visit)</th>
         </tr>
-        <% @cities.each do |city| %>
+        <% @trips.each do |trip| %>
         <tr>
         <td>
-            <p><%= city.name %></p>
+            <p><%= trip.city.name if trip.status == "visited" %></p>
         </td>
         </tr>
         <% end %>
@@ -31,10 +31,10 @@
         <tr>
           <th>City (Wish)</th>
         </tr>
-        <% @cities.each do |city| %>
+        <% @trips.each do |trip| %>
         <tr>
         <td>
-            <p><%= city.name %></p>
+            <p><%= trip.city.name if trip.status == "wished" %></p>
         </td>
         </tr>
         <% end %>

@@ -30,15 +30,18 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    #byebug
-    #binding.pry
     @user.update(user_params)
+    @trips = []
+    params[:status].each do |city_id, status|
+      binding.pry
+      @trips << Trip.find_or_create_by(user_id: params[:id], city_id: city_id)
+    end
     redirect_to user_path
   end
 
   def show
     @user = User.find(params[:id])
-    @cities = @user.cities.all
+    @trips = @user.trips.all
   end
 
   private
