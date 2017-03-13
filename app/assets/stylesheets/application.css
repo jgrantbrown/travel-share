@@ -19,6 +19,16 @@
    -o-background-size: cover;
    background-size: cover;
  }
+.list-container {
+  border-style: dotted;
+  width: 100%;
+}
+
+.list-container-list {
+  display: inline-block;
+  border-style: dashed;
+  width: 49%;
+}
 
  .container-1 {
   background-color: rgba(255, 255, 255, 0.7);
