@@ -54,13 +54,7 @@ City.create(name:"St. Petersburg",country:"Russia",description:"The second large
 City.create(name:"Muğla",country:"Turkey",description:"More info to follow. Waiting for more traveler response!")
 City.create(name:"Brussels",country:"Belgium",description:"Unassuming Brussels is the capital of Belgium, Flanders and Europe. Medieval Grand-Place, is indeed grand, with many 17th-century buildings and daily flower markets. Reopened in 2006, the Atomium, Brussels' Eiffel Tower, provides great views, inside and out. Architecture fans should visit Musee Horta, home of Belgian master architect Victor Horta. St. Gery's clubs and bars are packed year-round. Seafood eateries abound in Ste. Catherine. Walk, rather than get snarled up in traffic, in the narrow streets.")
 
-
-create_table "trips", force: :cascade do |t|
-  t.integer  "city_id"
-  t.integer  "user_id"
-  t.boolean  "status"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-end
-
 Trip.create(city_id: 1, user_id: 1, status: true)
+Trip.create(city_id: 2, user_id: 1, status: true)
+Trip.create(city_id: 3, user_id: 1, status: true)
+Trip.create(city_id: 4, user_id: 1, status: true)
