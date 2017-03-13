@@ -6,8 +6,8 @@
 
   <% @cities.each do |city| %>
   <tr>
-    <td><%= link_to city.name%></td>
-    <td><%= link_to city.country%></td>
+    <td><%= link_to city.name, city_path(city)%></td>
+    <td><%= city.country%></td>
   </tr>
   <% end %>
 </table>

@@ -3,35 +3,37 @@
 <%= form_for @user do |f| %>
 
   <div class="field">
-    <%= f.label :first_name, "First Name:" %>
-    <br>
-    <%= f.text_field :first_name %>
-    <br>
+    <%= f.label :first_name, "First Name:" %><br>
+    <%= f.text_field :first_name %><br>
     <br>
   </div>
 
   <div class="field">
-    <%= f.label :last_name, "Last Name:" %>
-    <br>
-    <%= f.text_field :last_name %>
-    <br>
+    <%= f.label :last_name, "Last Name:" %><br>
+    <%= f.text_field :last_name %><br>
     <br>
   </div>
 
   <div class="field">
-    <%= f.label :bio, "About Me:" %>
-    <br>
-    <%= f.text_area :bio %>
-    <br>
+    <%= f.label :bio, "About Me:" %><br>
+    <%= f.text_area :bio %><br>
     <br>
   </div>
-
 
   <div class="actions">
     <%= f.submit "Save Changes"%>
   </div>
+
+  <% @cities.each do |city| %>
+    <p><%= city.name %></p>
+    <p><%= radio_button_tag('status', 'visited')%> Visited</p>
+    <p><%= radio_button_tag('status', 'wish_list')%> Wish</p>
+  <% end %>
+
 <% end %>
 
 <br>
 <br>
+
+
 <%= link_to 'View Your Profile', user_path %>

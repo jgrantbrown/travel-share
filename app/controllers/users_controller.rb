@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @cities = City.all
   end
 
   def update
@@ -35,6 +36,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @cities = @user.cities.all
   end
 
   private
