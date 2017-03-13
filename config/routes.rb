@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "application#home"
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
+  get '/edit', to: "users#edit"
+  patch '/users/:id', to: "users#update"
   resources :users
   resources :sessions, only: [:create]
   resources :cities, only: [:show, :index]
