@@ -25,9 +25,12 @@
   </div>
 
   <% @cities.each do |city| %>
-    <p><%= city.name %></p>
-    <p><%= radio_button_tag('status', 'visited')%> Visited</p>
-    <p><%= radio_button_tag('status', 'wish_list')%> Wish</p>
+    <fieldset id= <%= city.name %> >
+        <p><%= city.name %></p>
+        Visited<input type="radio" value="visited" name="status[<%= city.id %>]" >
+        Wish<input type="radio" value="wished" name="status[<%= city.id %>]" >
+    </fieldset>
+
   <% end %>
 
 <% end %>
