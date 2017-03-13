@@ -1,29 +1,48 @@
-<h1>Create an Account</h1>
+<h1 class="header">Create an Account</h1>
 
 <%= form_for(@user) do |f|%>
+<form>
 
-  <%=f.label "Username"%></br>
+
+  <div class="container">
+  <p><%=f.label "Username"%></br> </p>
   <%= f.text_field :username%> </br>
+  </div>
 
-  <%=f.label "First Name"%></br>
+  <div class="container">
+  <p><%=f.label "First Name"%></br></p>
   <%= f.text_field :first_name%> </br>
+  </div>
 
-  <%=f.label "Last Name"%></br>
-  <%= f.text_field :last_name%> </br>
+    <div class="container">
+    <p><%=f.label "Last Name"%></br></p>
+    <%= f.text_field :last_name%> </br>
+    </div>
 
-  <%=f.label "Email" %></br>
-  <%= f.email_field :email%></br>
+    <div class="container">
+    <p><%=f.label "Email" %></br></p>
+    <%= f.email_field :email%></br>
+    </div>
 
-  <%=f.label "About Me:" %></br>
-  <%= f.text_area :bio%></br>
 
-  <%=f.label "Password" %></br>
+    <div class="container">
+    <p><%=f.label "About Me:" %></br></p>
+    <%= f.text_area :bio%></br>
+    </div>
+
+  <div class="container">
+  <p><%=f.label "Password" %></br></p>
   <%= f.password_field :password%> </br>
+  </div>
 
-  <%=f.label "Password Confirmation" %></br>
+  <div class="container">
+  <p><%=f.label "Password Confirmation" %></br></p>
   <%= f.password_field :password_confirmation%> </br>
+  </div>
 
+  <div class="container">
   <%= f.submit "Start your travel journey!"%></br>
-
-
+  </div>
+  </form>
+  
 <%end %>

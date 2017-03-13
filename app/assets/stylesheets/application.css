@@ -10,6 +10,114 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ .main {
+   background: url("home-background.jpeg") no-repeat center center fixed;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+ .container-1 {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  margin: 10% auto;
+  width: 50%;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  text-align: center;
+ }
+
+ .button {
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    padding: 11px 20px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+    }
+
+ .button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+    }
+ .button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    }
+
+    p {
+      font-size: 120%;
+      font-family: "Arial Black", Gadget, sans-serif;
+      color: green;
+    }
+
+
+    body {
+
+       background-color: #FEFEF2
+
+
+
+    }
+
+
+
+    h2 {
+     font-size: 200%;
+     font-family: "Arial Black", Gadget, sans-serif
+
+    }
+
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+    }
+
+
+    /* Bordered form */
+    .header {
+      color: green;
+      text-align: center;
+      font-size: 300%;
+      font-family: "Arial Black", Gadget, sans-serif
+
+    }
+
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+        width: 40%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family: "Arial Black", Gadget, sans-s
+    }
