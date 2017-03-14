@@ -6,6 +6,19 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <div class="image-container">
+      <div class="slide-header">
+        <h1 class="text">Slider</h1>
+      </div>
+
+      <div id="slider">
+        <ul class="slides">
+          <li class="slide"><img src="<%= @photos[0] %>" alt=""></li>
+        </ul>
+      </div>
+
+    </div>
+
     <div class="city-info">
       <h2><%= @city.name %>, <%= @city.country %></h2>
       <h3><%= @city.description %></h3>
