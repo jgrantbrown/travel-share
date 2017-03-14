@@ -1,3 +1,4 @@
+
 class City < ApplicationRecord
   has_many :trips
   has_many :users, through: :trips
@@ -5,7 +6,7 @@ class City < ApplicationRecord
 
   def google_api_fetch
     google_url = "https://maps.googleapis.com/maps/api/geocode/json?address="
-    key = "AIzaSyD4KIn11LGMnDI1aTA5w2sIRgHpjRAeqqw"
+    key = "AIzaSyBX0uhYUckiNoXfuIesdb-mto1elMAGPT4"
     @city_data =  JSON.parse(RestClient.get(google_url + self.name + "&" + key))
 end
 

@@ -4,25 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <style>
-      #map {
-        height: 400px;
-        width: 100%
-      }
-    </style>
   </head>
   <body>
-    <h2><%= @city.name %></h2>
-    <h3><%= @city.country %></h3>
-    <h3><%= @city.description %></h3>
+    <div class="city-info">
+      <h2><%= @city.name %>, <%= @city.country %></h2>
+      <h3><%= @city.description %></h3>
+    </div>
 
-
-
-    <a href="http://maps.google.com/?q=<%=@city.latitude%>,<%=@city.longitude%>">Google Maps</a>
-    <br />
-
+    <a href="http://maps.google.com/?q=<%=@city.latitude%>,<%=@city.longitude%>">Google Maps</a><br />
     <%= render partial: 'city_map', locals: {city: @city} %>
-
 
   </body>
 </html>
