@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-
+  before_action :require_login
 
   def index
     @cities = City.all
@@ -15,6 +15,10 @@ class CitiesController < ApplicationController
 
   def city_params
     params.require(:city).permit(:name, :latitude, :longtitude, :country, :description)
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include?(:user_id)
   end
 
 end

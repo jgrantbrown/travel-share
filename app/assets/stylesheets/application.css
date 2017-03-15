@@ -132,18 +132,45 @@ input[type=text], input[type=password] {
   margin: 0 20%;
 }
 
-.city-info>h2{
-  font-family: 'EB Garamond', serif;
-  text-align: center;
-  text-decoration: underline;
-  margin: 0;
-}
 .city-info>h3{
   font-family: futura;
   font-size: 0.9em;
 }
 
+.city-header>h2 {
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+}
+
+/* Controls size of google map */
 #map {
   height: 400px;
   width: 100%
+}
+
+/* CSS for Image Slider */
+
+#slider {
+  height: 100%;
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+  left: 27%;
+}
+
+#slider .slides {
+  display: block;
+  width: 10000px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  height: 250px;
+  width: 400px;
 }

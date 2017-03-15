@@ -44,12 +44,12 @@ class City < ApplicationRecord
     @request = google_api_place_details
     google_url = "https://maps.googleapis.com/maps/api/place/photo?"
     max_width = "maxwidth=400"
-    @list_of_photos = []
+    @photos = []
     @request["result"]["photos"].each.with_index do |photo_link, index|
       photo_reference = "photoreference=#{@request["result"]["photos"][index]["photo_reference"]}"
-      @list_of_photos << "#{google_url}&#{max_width}&#{photo_reference}&key=#{KEY}"
+      @photos << "#{google_url}&#{max_width}&#{photo_reference}&key=#{KEY}"
     end
-    @list_of_photos
+    @photos
   end
 
 

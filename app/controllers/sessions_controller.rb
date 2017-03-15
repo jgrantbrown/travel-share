@@ -8,20 +8,19 @@ class SessionsController < ApplicationController
   end
 
   def create
-  #  byebug
     @user = User.find_by(username: params[:user][:username])
-    #byebug
-    if @user #&& @user.authenticate(params[:user][:password])
+    if @user.nil?
+      redirect_to login_path
+    else
       session[:user_id] = @user.id
       redirect_to user_path(@user)
-    else
-      redirect_to login_path
     end
   end
 
   def destroy
-    session.delete :username
-    redirect_to '/login'
+    User.find(session[:user_id]).destroy
+    session[:user_id] = nil
+    redirect_to '/'
   end
 
   private
