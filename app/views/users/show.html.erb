@@ -1,9 +1,13 @@
+
+<body class="profile">
+<%= render "layouts/navbar" %>
+<h1><%= "#{@user.first_name.capitalize } #{@user.last_name.capitalize}"%></h1>
   <div class="pic">
     <%= render "/layouts/user_icon" %>
   </div>
 
   <div>
-    <h1><%= "#{@user.first_name.capitalize } #{@user.last_name.capitalize}"%></h1>
+
     <p><strong>About Me:</strong> <%= @user.bio %></p>
     <p><strong>Email:</strong>  <%= @user.email %></p>
     <!-- <a href= <%= "@user.email" %> >Email</a> -->
@@ -15,3 +19,5 @@
 
 
 </div>
+
+</body>

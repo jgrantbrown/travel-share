@@ -7,15 +7,14 @@
   <body class="login">
     <%= form_for @user, url: sessions_path(@user), method: :post do |f|%>
       <form>
-        <h1 class="header">Log in</h1>
+        <h1 class="header"><img src="images/TravelShare_Logo.jpg" alt=""></h1>
         <div class="container">
-          <p><%=f.label "Username"%></p>
-          <%= f.text_field :username%> </br>
+          <br>
+          <%= f.text_field :username, placeholder: "Username"%> </br>
 
-          <p><%=f.label "Password"%></p>
-          <%= f.password_field :password%> </br>
+          <%= f.password_field :password, placeholder: "Password"%> </br> <br>
 
-          <%= f.submit "Continue your travel journey!"%> </br>
+          <%= f.submit "Login to continue your travel journey!"%> </br>
           <%= link_to "Sign Up", new_user_path %>
         </div>
       </form>

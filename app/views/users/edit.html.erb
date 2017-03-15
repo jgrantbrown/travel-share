@@ -20,25 +20,15 @@
     <br>
   </div>
 
+
+
   <div class="actions">
     <%= f.submit "Save Changes"%>
   </div>
 
-
-<!--
-  <% @cities.each do |city| %>
-    <fieldset id= <%= city.name %> >
-        <p><%= city.name %></p>
-        Visited<input type="radio" value="visited" name="status[<%= city.id %>]" >
-        Wish<input type="radio" value="wished" name="status[<%= city.id %>]" >
-    </fieldset>
-
-  <% end %>
--->
 <% end %>
 
 <br>
 <br>
-
 
 <%= link_to 'View Your Profile', user_path %>

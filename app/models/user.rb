@@ -5,7 +5,7 @@ class User < ApplicationRecord
     validates :last_name, presence: true
     validates :email, presence: true, uniqueness: true
     validates :bio, presence: true
-    validates :password, presence: true
+    validates :password, presence: true, on: :create
 
     has_many :trips
     has_many :cities, through: :trips
