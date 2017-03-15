@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "application#home"
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
+  delete '/logout' => 'sessions#destroy'
   get '/edit', to: "users#edit"
   patch '/users/:id', to: "users#update"
   resources :users
