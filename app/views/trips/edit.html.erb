@@ -1,0 +1,11 @@
+<h2>Edit Trips</h2>
+
+<%= form_for @user, url: user_trips_path, method: :post do |f|%>
+<%= f.submit %>
+  <%  @cities.each do |city| %>
+    <%= city.name %>
+    Visited<input type="radio" id="<%= city.id %>" name="[status]<%= city.id %>" value="Visited" <%= checked="checked" if !@trips.find_by(city_id: city.id).nil? && @trips.find_by(city_id: city.id).status == "Visited"  %>/>
+    Wished<input type="radio" id="<%= city.id %>" name="[status]<%= city.id %>" value="Wished" <%= checked="checked" if !@trips.find_by(city_id: city.id).nil? && @trips.find_by(city_id: city.id).status == "Wished"  %> />
+    <br>
+  <% end %>
+<% end %>

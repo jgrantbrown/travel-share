@@ -1,0 +1,20 @@
+<h1><%= @user.first_name %> <%= @user.last_name %>'s Travel Adventures</h1>
+<p><%= link_to 'Edit trips', edit_user_trips_path %></p>
+<div class="list-container">
+  <div class="list-container-list">
+    <h3>Visited</h3>
+    <% @user.trips.each do |trip|%>
+      <% if trip.status == "Visited"%>
+        <p><%= link_to trip.city.name, city_path(trip.city) %> </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="list-container-list">
+      <h3>Wished</h3>
+    <% @user.trips.each do |trip|%>
+      <% if trip.status == "Wished"%>
+        <p><%= link_to trip.city.name, city_path(trip.city) %> </p>
+      <% end %>
+    <% end %>
+  </div>
+</div>

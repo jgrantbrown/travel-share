@@ -7,43 +7,11 @@
     <p><strong>About Me:</strong> <%= @user.bio %></p>
     <p><strong>Email:</strong>  <%= @user.email %></p>
     <!-- <a href= <%= "@user.email" %> >Email</a> -->
-    <p><%= link_to 'Edit', edit_user_path(@user) %></p>
+    <p><%= link_to 'Edit Profile', edit_user_path(@user) %></p>
+    <p><%= link_to 'See Trips', user_trips_path(@user) %></p>
     <p><%= link_to 'See all Cities', cities_path %></p>
     <p><%= link_to "Log out", logout_path, method: "delete" %></p>
   </div>
 
-
-
-  <div class="list-container">
-    <div class="list-container-list">
-      <table>
-        <tr>
-          <th>City (Visit)</th>
-        </tr>
-        <% @trips.each do |trip| %>
-        <tr>
-        <td>
-            <p><%= trip.city.name if trip.status == "visited" %></p>
-        </td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
-
-    <div class="list-container-list">
-      <table>
-        <tr>
-          <th>City (Wish)</th>
-        </tr>
-        <% @trips.each do |trip| %>
-        <tr>
-        <td>
-            <p><%= trip.city.name if trip.status == "wished" %></p>
-        </td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
-  </div>
 
 </div>

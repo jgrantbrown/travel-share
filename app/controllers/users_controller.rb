@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    #byebug
     @user.update(user_params)
     @trips = []
     params[:status].each do |city_id, status|
@@ -56,6 +57,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :first_name,:last_name, :email, :bio, :admin, :password, :password_confirmation)
+  end
+
+  def trip_params
+    params.require(:trip).permit(:city_id, :user_id, :status)
   end
 
 end
