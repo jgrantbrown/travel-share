@@ -46,9 +46,10 @@
 }
 
 .list-container-list {
-  display: inline-block;
+  float:left;
   border-style: dashed;
   width: 49%;
+  overflow: scroll;
 }
 
 .container-1 {
