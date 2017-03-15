@@ -1,0 +1,14 @@
+<h2>Edit Trips</h2>
+<%= @cities[0].name %> Visited<input type="radio" value="visited" name="status[<%= @cities[0].id %>]" >
+Wish<input type="radio" value="wished" name="status[<%= @cities[0].id %>]" >
+<br>
+<%= @cities[1].name %> Visited<input type="radio" value="visited" name="status[<%= @cities[1].id %>]" >
+Wish<input type="radio" value="wished" name="status[<%= @cities[1].id %>]" >
+
+<%= form_for @user, url: user_trips_path, method: :post do |f|%>
+  <%  @cities.each do |city| %>
+    <%= city.name %><input type="radio" id= "<%= @cities[0].id %>" name="city[<%= city.name %>][status]" value="visited" />
+    <input type="radio" id= "<%= @cities[0].id %>" name="city[<%= city.name %>][status]" value="wished" />
+  <% end %>
+  <%= f.submit %>
+<% end %>
