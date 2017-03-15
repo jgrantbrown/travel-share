@@ -13,14 +13,23 @@
  */
  @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 
- .main {
-   background: url("home-background.jpeg") no-repeat center center fixed;
-   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
- }
+.main {
+  background: url("home-background.jpeg") no-repeat center center fixed;
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.signup {
+  background: url("sign-up-bg.jpeg") no-repeat center center fixed;
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .list-container {
   border-style: dotted;
@@ -79,11 +88,16 @@
 }
 
 p {
-font-size: 120%;
-font-family: "Arial Black", Gadget, sans-serif;
-color: green;
+  font-size: 120%;
+  font-family: futura, Gadget, sans-serif;
+  color: green;
+  margin: 0;
 }
 
+.new_user {
+  text-align:center;
+  position:relative;
+}
 
 body {
  background-color: #FEFEF2
@@ -91,7 +105,7 @@ body {
 
 h2{
   font-size: 200%;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: futura, Gadget, sans-serif;
 }
 
 /* Add padding to containers */
@@ -112,20 +126,22 @@ h2{
   color: green;
   text-align: center;
   font-size: 300%;
-  font-family: "Arial Black", Gadget, sans-serif
-
+  font-family: 'EB Garamond', Gadget, sans-serif;
+  margin: 0;
+  text-decoration: underline;
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 40%;
+input[type=text], input[type=password], input[type=email], textarea {
+  width: 30%;
   padding: 10px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: future, Gadget, sans-serif;
 }
+
 
 /* CSS for City Show Page*/
 .city-info {
@@ -174,3 +190,5 @@ input[type=text], input[type=password] {
   height: 250px;
   width: 400px;
 }
+
+/* NAv bar */

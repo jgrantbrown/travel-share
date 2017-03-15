@@ -1,48 +1,40 @@
-<h1 class="header">Create an Account</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body class="signup">
+    <h1 class="header">Create an Account</h1>
 
-<%= form_for(@user) do |f|%>
-<form>
+    <%= form_for(@user) do |f|%>
+      <form>
+        <div class="container">
+        <p><%=f.label "Username"%></br> </p>
+        <%= f.text_field :username%> </br>
 
+        <p><%=f.label "First Name"%></br></p>
+        <%= f.text_field :first_name%> </br>
 
-  <div class="container">
-  <p><%=f.label "Username"%></br> </p>
-  <%= f.text_field :username%> </br>
-  </div>
+        <p><%=f.label "Last Name"%></br></p>
+        <%= f.text_field :last_name%> </br>
 
-  <div class="container">
-  <p><%=f.label "First Name"%></br></p>
-  <%= f.text_field :first_name%> </br>
-  </div>
+        <p><%=f.label "Email" %></br></p>
+        <%= f.email_field :email%></br>
 
-    <div class="container">
-    <p><%=f.label "Last Name"%></br></p>
-    <%= f.text_field :last_name%> </br>
-    </div>
+        <p><%=f.label "About Me:" %></br></p>
+        <%= f.text_area :bio%></br>
 
-    <div class="container">
-    <p><%=f.label "Email" %></br></p>
-    <%= f.email_field :email%></br>
-    </div>
+        <p><%=f.label "Password" %></br></p>
+        <%= f.password_field :password%> </br>
 
+        <p><%=f.label "Password Confirmation" %></br></p>
+        <%= f.password_field :password_confirmation%> </br>
 
-    <div class="container">
-    <p><%=f.label "About Me:" %></br></p>
-    <%= f.text_area :bio%></br>
-    </div>
+        <%= f.submit "Start your travel journey!"%></br>
+        </div>
 
-  <div class="container">
-  <p><%=f.label "Password" %></br></p>
-  <%= f.password_field :password%> </br>
-  </div>
+      </form>
+    <%end %>
 
-  <div class="container">
-  <p><%=f.label "Password Confirmation" %></br></p>
-  <%= f.password_field :password_confirmation%> </br>
-  </div>
-
-  <div class="container">
-  <%= f.submit "Start your travel journey!"%></br>
-  </div>
-  </form>
-
-<%end %>
+  </body>
+</html>

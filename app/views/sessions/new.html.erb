@@ -1,25 +1,23 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <%= form_for @user, url: sessions_path(@user), method: :post do |f|%>
+      <form>
+        <h1 class="header">Log in</h1>
+        <div class="container">
+          <p><%=f.label "Username"%> </p></br>
+          <%= f.text_field :username%> </br>
 
+          <p><%=f.label "Password"%></br></p>
+          <%= f.password_field :password%> </br>
 
-
-  <%= form_for @user, url: sessions_path(@user), method: :post do |f|%>
-  <form>
-
-
-<h1 class="header">Log in</h1>
-
-  <div class="container">
-
-    <p><%=f.label "Username"%> </p></br>
-    <%= f.text_field :username%> </br>
-  </div>
-
-    <div class="container">
-    <p><%=f.label "Password"%></br></p>
-    <%= f.password_field :password%> </br>
-  </div>
-  <div class="container">
-    <%= f.submit "Continue your travel journey!"%> </br>
-</div>
-    </form>
-<% end %>
+          <%= f.submit "Continue your travel journey!"%> </br>
+        </div>
+      </form>
+    <% end %>
+  </body>
+</html>
