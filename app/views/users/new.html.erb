@@ -5,6 +5,18 @@
   </head>
   <body class="signup">
     <h1 class="header">Create an Account</h1>
+    <% if @user.errors.any? %>
+
+ <div id="container">
+   <h3><b>Uh-oh! <%= pluralize(@user.errors.count, "error") %> prohibited you from creating an account:</b></h3>
+
+   <ul>
+   <% @user.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+ </div>
+ <% end %>
 
     <%= form_for(@user) do |f|%>
       <form>

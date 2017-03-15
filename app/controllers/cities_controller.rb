@@ -18,7 +18,7 @@ class CitiesController < ApplicationController
   end
 
   def require_login
-    return head(:forbidden) unless session.include?(:user_id)
+    return redirect_to(controller: 'sessions', action: 'new') unless logged_in?
   end
 
 end

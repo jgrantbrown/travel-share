@@ -1,8 +1,9 @@
-
 class City < ApplicationRecord
   has_many :trips
   has_many :users, through: :trips
-  KEY = "AIzaSyDHo4oNRgoF_vXpEaq7R_6M1RCyyPiQaqo"
+  has_many :reviews, through: :trips
+
+  KEY = ""
 
   # method to send request to fetch geocode location of a city
   def google_api_fetch
