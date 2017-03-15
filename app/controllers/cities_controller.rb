@@ -11,6 +11,12 @@ class CitiesController < ApplicationController
     @photos = @city.gather_api_photo_data
   end
 
+  def review
+    @city = City.find(params[:id])
+    @reviews = @city.reviews
+    render template: 'cities/:id'
+  end
+
   private
 
   def city_params
