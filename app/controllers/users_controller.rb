@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_login
-   skip_before_action :require_login, only: [:new, :create]
+  #before_action :require_login
+  #skip_before_action :require_login, only: [:new, :create]
 
   def new
     @user = User.new
@@ -17,14 +17,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def login_page
-  # end
-  #
-  # def login
-  #   byebug
-  #   @user = User.find_by(username: params[:username])
-  #   redirect_to user_path(@user.id)
-  # end
 
   def edit
     @user = User.find(params[:id])
@@ -33,13 +25,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    #byebug
-    @user.update(user_params)
-    @trips = []
-    params[:status].each do |city_id, status|
-      binding.pry
-      @trips << Trip.find_or_create_by(user_id: params[:id], city_id: city_id)
-    end
+    @user.first_name = user_params[:first_name]
+    @user.last_name = user_params[:last_name]
+    @user.bio = user_params[:bio]
+    @user.save
+    #@user.update(user_params)
     redirect_to user_path
   end
 
@@ -49,8 +39,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-       session.delete :user_id
-       redirect_to '/login'
+    session.delete :user_id
+    redirect_to '/login'
   end
 
   private
@@ -59,8 +49,5 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :first_name,:last_name, :email, :bio, :admin, :password, :password_confirmation)
   end
 
-  def trip_params
-    params.require(:trip).permit(:city_id, :user_id, :status)
-  end
 
 end

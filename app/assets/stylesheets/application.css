@@ -12,19 +12,32 @@
  *
  */
  @import url('https://fonts.googleapis.com/css?family=EBGaramond');
+ @import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700');
 
 .main {
   background: url("home-background.jpeg") no-repeat center center fixed;
   font-family: futura, Helvetica, Arial, Sans-Serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  font-weight: bold;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.profile {
+  background: url("profile.jpeg") no-repeat center center fixed;
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
 .signup {
   background: url("sign-up-bg.jpeg") no-repeat center center fixed;
-  font-family: futura, Helvetica, Arial, Sans-Serif;
+  font-family:'Quattrocento', Arial;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +46,7 @@
 
 .login {
   background: url("login.jpg") no-repeat center center fixed;
-  font-family: futura, Helvetica, Arial, Sans-Serif;
+  font-family:'Quattrocento', Arial;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,10 +66,10 @@
 }
 
 .container-1 {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   margin: 10% auto;
-  width: 50%;
+  width: 20%;
   padding-bottom: 50px;
   padding-top: 30px;
   text-align: center;
@@ -78,9 +91,9 @@
   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
   box-shadow: rgba(0,0,0,1) 0 1px 0;
   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-  color: white;
+  color: black;
   font-size: 14px;
-  font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+  font-family:'Quattrocento', Arial;
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
@@ -99,8 +112,9 @@
 
 p {
   font-size: 120%;
-  font-family: futura, Gadget, sans-serif;
-  color: green;
+  font-family:'Quattrocento', Arial;
+   font-weight: bold;
+   color: black;
   margin: 0;
 }
 
@@ -115,12 +129,12 @@ body {
 
 h2{
   font-size: 200%;
-  font-family: futura, Gadget, sans-serif;
+  font-family: 'Quattrocento', Arial;
 }
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  padding: 2px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -133,12 +147,13 @@ h2{
 
 /* Bordered form */
 .header {
-  color: green;
+  padding: 20px 0 0 0;
+   color: black;
   text-align: center;
   font-size: 300%;
-  font-family: 'EB Garamond', Gadget, sans-serif;
+  font-family: 'Quattrocento', Arial;
   margin: 0;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Full-width inputs */
@@ -159,21 +174,22 @@ input[type=text], input[type=password], input[type=email], textarea {
 }
 
 .city-info>h3{
-  font-family: futura;
-  font-size: 0.9em;
+  font-family: 'Quattrocento', Arial;
+   font-size: 1.5em;
 }
 
 .city-header>h2 {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Quattrocento', Arial;
   text-align: center;
-  text-decoration: underline;
+  font-weight: bold;
   margin: 0;
 }
 
 /* Controls size of google map */
 #map {
   height: 400px;
-  width: 100%
+  width: 75%;
+   margin: 0 auto;
 }
 
 /* CSS for Image Slider */
@@ -183,7 +199,7 @@ input[type=text], input[type=password], input[type=email], textarea {
   width: 400px;
   overflow: hidden;
   position: relative;
-  left: 27%;
+  left: 35%;
 }
 
 #slider .slides {
@@ -203,14 +219,19 @@ input[type=text], input[type=password], input[type=email], textarea {
 
 /* NAv bar */
 .example3 .navbar-brand {
-     height: 80px;
+     height: 0px;
+   }
+   .navbar .brand > img {
+     max-height: 40px;
    }
 
    .example3 .nav >li >a {
-     padding-top: 30px;
-     padding-bottom: 30px;
+     padding-top: 5px;
+      padding-bottom: 20px;
+      padding-right: 50px;
+      padding-left: 10px;
    }
    .example3 .navbar-toggle {
-     padding: 10px;
+     padding: 30px;
      margin: 25px 15px 25px 0;
    }
