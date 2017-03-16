@@ -11,9 +11,10 @@
        </div>
        <div id="navbar3" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
-           <li class="active"><a href="<%=''%>">My Travels</a></li>
+           <li class="active"><a href="<%=user_trips_path(@user)%>">My Travels</a></li>
            <li><a href="<%= cities_path%>">Destinations</a></li>
-           <li><a href="<%=users_path %>">Other Travelers</a></li>
+           <li><a href="<%=user_path(@user) %>">My Profile</a></li>
+          
            <li> <%= link_to "Log out", logout_path, method: "delete", options: {class: "glyphicon glyphicon-log-out"}%></li>
          </ul>
            </li>
