@@ -27,8 +27,6 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'gmaps4rails'
-gem 'geokit-acts-as-mappable', :git => 'git@github.com:alexyakubenko/geokit-acts-as-mappable.git', :tag => '0.0.2'
 
 gem 'rest-client'
 gem 'json'
