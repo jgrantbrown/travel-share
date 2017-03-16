@@ -8,6 +8,7 @@ class City < ApplicationRecord
   # method to send request to fetch geocode location of a city
   def google_api_fetch
     google_url = "https://maps.googleapis.com/maps/api/geocode/json?address="
+
     JSON.parse(RestClient.get(google_url + self.name + "&" + KEY))
   end
 

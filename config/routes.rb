@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :sessions, only: [:create]
-  resources :cities, only: [:show, :index]
+  resources :cities, only: [:show, :index, :new, :create]
   resources :trips, except: [:show]
   resources :reviews
 

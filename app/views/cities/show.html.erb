@@ -22,9 +22,7 @@
       </div>
     </div>
 
-    <div class="review">
-      <%= link_to "Add Review", new_user_trip_review_path(@user, @user.trips.find_by(city_id: @city.id))%>
-    </div>
+
     <div class="city-info">
       <h3><%= @city.description %></h3>
     </div>
