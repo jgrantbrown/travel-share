@@ -6,15 +6,18 @@ class CitiesController < ApplicationController
   end
 
   def create
-
-    @city = City.new(city_params)
-  
-    if City.find_by(id: @city.id)
-      render new_city_path
+    @user = User.find(session[:user_id])
+    if @user.admin == true
+      @city = City.new(city_params)
+      if City.find_by(id: @city.id)
+        render new_city_path
+      else
+        @city.gather_api_city_data
+        @city.save
+        redirect_to cities_path
+      end
     else
-      @city.gather_api_city_data
-      @city.save
-      redirect_to cities_path
+      redirect_to new_city_path
     end
   end
 
@@ -39,6 +42,10 @@ class CitiesController < ApplicationController
 
   def require_login
     return redirect_to(controller: 'sessions', action: 'new') unless logged_in?
+  end
+
+  def require_admin
+    return redirect_to(controller: 'cities', action: 'index') unless is_admin?
   end
 
 end

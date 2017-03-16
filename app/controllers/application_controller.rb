@@ -13,8 +13,21 @@ class ApplicationController < ActionController::Base
    User.find(session[:user_id]) if logged_in?
  end
 
+ def is_admin?
+  @user = User.find(session["user_id"])
+  if logged_in? && @user.admin == true
+    return true
+  else
+    return false
+  end
+ end
+
 
   def require_login
     return redirect_to(controller: 'sessions', action: 'new') unless logged_in?
+  end
+
+  def require_admin
+    return redirect_to(controller: 'cities', action: 'index') unless is_admin?
   end
 end
