@@ -2,6 +2,7 @@ class City < ApplicationRecord
   has_many :trips
   has_many :users, through: :trips
   has_many :reviews, through: :trips
+  validates :name, uniqueness: true, presence: true
 
   KEY = "AIzaSyDHo4oNRgoF_vXpEaq7R_6M1RCyyPiQaqo"
 
