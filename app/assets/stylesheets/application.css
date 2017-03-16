@@ -56,8 +56,8 @@
 .cityindexheader{
   text-align: center;
 }
-.list-container {
 
+.list-container {
   width: 100%;
 }
 
@@ -69,9 +69,9 @@
 }
 
 .container-1 {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
-  margin: 10% auto;
+  margin: 15% auto;
   width: 20%;
   padding-bottom: 50px;
   padding-top: 30px;
@@ -113,12 +113,20 @@
   background: #1b435e;
 }
 
+.login-page {
+  margin-top: 20px;
+}
+
 p {
   font-size: 120%;
   font-family:'Quattrocento', Arial;
-   font-weight: bold;
-   color: black;
+  font-weight: bold;
+  color: black;
+}
+
+.sign-up-field {
   margin: 0;
+  margin-top: 15px;
 }
 
 .new_user {
@@ -137,7 +145,7 @@ h2{
 
 /* Add padding to containers */
 .container {
-  padding: 2px;
+  padding: 10px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -151,7 +159,7 @@ h2{
 /* Bordered form */
 .header {
   padding: 20px 0 0 0;
-   color: black;
+  color: black;
   text-align: center;
   font-size: 300%;
   font-family: 'Quattrocento', Arial;
@@ -163,11 +171,33 @@ h2{
 input[type=text], input[type=password], input[type=email], textarea {
   width: 30%;
   padding: 10px 20px;
-  margin: 8px 0;
+  margin: 5px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
   font-family: future, Gadget, sans-serif;
+}
+
+.user-profile {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.edit-profile {
+  text-align: center;
+}
+
+.review {
+  text-align: center;
+}
+
+.review-form {
+  text-align: center;
 }
 
 
@@ -239,6 +269,9 @@ input[type=text], input[type=password], input[type=email], textarea {
      padding-bottom: 0px;
      margin: 25px 15px 25px 0;
    }
+
+
+
 
 /* city index */
 .backimg{

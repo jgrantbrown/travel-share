@@ -26,7 +26,7 @@ class TripsController < ApplicationController
 
   def edit
     @user = User.find(params[:user_id])
-    @cities = City.all
+    @cities = City.all.sort_by{|city| city.name}
     @trips = @user.trips
   end
 

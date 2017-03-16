@@ -3,7 +3,6 @@ class CitiesController < ApplicationController
 
   def index
     @cities = City.all
-
     @user = User.find(session[:user_id])
   end
 

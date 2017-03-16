@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   get '/edit', to: "users#edit"
   patch '/users/:id', to: "users#update"
-  
+
   get '/users/:user_id/trips/edit', to: 'trips#edit', as: 'edit_user_trips'
   resources :users do
-    resources :trips, except: [:show]
+    resources :trips, except: [:show] do
+      resources :reviews
+    end
   end
   resources :sessions, only: [:create]
   resources :cities, only: [:show, :index]
   resources :trips, except: [:show]
+  resources :reviews
+
 end

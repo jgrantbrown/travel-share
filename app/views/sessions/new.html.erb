@@ -6,18 +6,22 @@
   </head>
   <body class="login">
     <%= form_for @user, url: sessions_path(@user), method: :post do |f|%>
-      <form>
-        <h1 class="header"><img src="images/TravelShare_Logo.jpg" alt=""></h1>
+      <div class="login-page">
+        <h1 class="header">
+          <img src="images/TravelShare_Logo.jpg" alt="">
+        </h1>
         <div class="container">
           <br>
           <%= f.text_field :username, placeholder: "Username"%> </br>
 
           <%= f.password_field :password, placeholder: "Password"%> </br> <br>
 
-          <%= f.submit "Login to continue your travel journey!"%> </br>
-          <%= link_to "Sign Up", new_user_path %>
+          <%= f.submit "Login"%>
+          <button>
+            <%= link_to "Sign Up", new_user_path %>
+          </button>
         </div>
-      </form>
+      </div>
     <% end %>
   </body>
 </html>
