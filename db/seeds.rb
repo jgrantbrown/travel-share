@@ -55,6 +55,4 @@ City.create(name:"Muğla",country:"Turkey",description:"More info to follow. Wai
 City.create(name:"Brussels",country:"Belgium",description:"Unassuming Brussels is the capital of Belgium, Flanders and Europe. Medieval Grand-Place, is indeed grand, with many 17th-century buildings and daily flower markets. Reopened in 2006, the Atomium, Brussels' Eiffel Tower, provides great views, inside and out. Architecture fans should visit Musee Horta, home of Belgian master architect Victor Horta. St. Gery's clubs and bars are packed year-round. Seafood eateries abound in Ste. Catherine. Walk, rather than get snarled up in traffic, in the narrow streets.")
 
 
-User.create(username: "admin10", first_name: "admin", last_name: "admin", email: "admin10@gmail.com", bio: "admin", admin: true, password: "admin", password_confirmation: "admin")
-
-params.require(:user).permit(:username, :first_name, :last_name, :email, :bio, :admin, :password, :password_confirmation)
+User.create(username: "admin10", first_name: "admin", last_name: "admin", email: "admin10@gmail.com", bio: "admin", admin: true, password: "admin")
