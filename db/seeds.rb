@@ -56,3 +56,5 @@ City.create(name:"Brussels",country:"Belgium",description:"Unassuming Brussels i
 
 
 User.create(username: "admin10", first_name: "admin", last_name: "admin", email: "admin10@gmail.com", bio: "admin", admin: true, password: "admin", password_confirmation: "admin")
+
+params.require(:user).permit(:username, :first_name, :last_name, :email, :bio, :admin, :password, :password_confirmation)
