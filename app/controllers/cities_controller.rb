@@ -3,12 +3,15 @@ class CitiesController < ApplicationController
 
   def index
     @cities = City.all
+
+    @user = User.find(session[:user_id])
   end
 
   def show
     @city = City.find(params[:id])
     @city_data = @city.gather_api_city_data
     @photos = @city.gather_api_photo_data
+    @user = User.find(session[:user_id])
   end
 
   private

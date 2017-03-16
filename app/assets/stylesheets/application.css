@@ -53,14 +53,17 @@
   background-size: cover;
 }
 
+.cityindexheader{
+  text-align: center;
+}
 .list-container {
-  border-style: dotted;
+
   width: 100%;
 }
 
 .list-container-list {
   float:left;
-  border-style: dashed;
+  text-align: center;
   width: 49%;
   overflow: scroll;
 }
@@ -233,5 +236,36 @@ input[type=text], input[type=password], input[type=email], textarea {
    }
    .example3 .navbar-toggle {
      padding: 30px;
+     padding-bottom: 0px;
      margin: 25px 15px 25px 0;
    }
+
+/* city index */
+.backimg{
+  background: url("home-background.jpeg") no-repeat center center fixed;
+  font-family: fu tura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.citylist{
+  width: 50%;
+
+  background-color: white;
+
+}
+
+.citylisttable, tr, td{
+
+  margin: 0 auto;
+
+}
+
+/* edit list */
+.editlist{
+  margin-left: 33%;
+}
