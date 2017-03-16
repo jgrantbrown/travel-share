@@ -11,7 +11,7 @@
     <% end %>
   </div>
   <div class="list-container-list">
-      <h3>Bucket List</h3>
+    <h3>Bucket List</h3>
     <% @user.trips.each do |trip|%>
       <% if trip.status == "Wished"%>
         <p><%= link_to trip.city.name, city_path(trip.city) %> </p>

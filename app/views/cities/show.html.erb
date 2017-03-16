@@ -32,6 +32,29 @@
     <a href="http://maps.google.com/?q=<%=@city.latitude%>,<%=@city.longitude%>">Google Maps</a><br />
     <%= render partial: 'city_map', locals: {city: @city} %>
 
+    <div class="list-container">
+      <div class="list-container-list">
+        <h3>Explored</h3>
+        <% @trips.each do |trip|%>
+          <% if trip.status == "Visited"%>
+            <p><%= link_to trip.user.username, user_trips_path(trip.user) %> </p>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="list-container-list">
+        <h3>Bucket List</h3>
+        <% @trips.each do |trip|%>
+          <% if trip.status == "Wished"%>
+            <p><%= link_to trip.user.username, user_trips_path(trip.user) %> </p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+
+
+
+
   </body>
   <script>
     //configuration
