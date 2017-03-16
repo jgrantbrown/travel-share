@@ -2,7 +2,7 @@ class CitiesController < ApplicationController
   before_action :require_login
 
   def index
-    @cities = City.all
+    @cities = City.all.sort_by{|city| city.name}
     @user = User.find(session[:user_id])
   end
 
