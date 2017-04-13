@@ -9,5 +9,4 @@ class User < ApplicationRecord
 
   has_many :trips
   has_many :cities, through: :trips
-  has_many :reviews, through: :trips
 end

@@ -6,15 +6,11 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @user = User.find(session[:user_id])
-    @city = @user.trips.find_by(id: params[:trip_id]).city
-    session[:trip_id] = params[:trip_id]
   end
 
   def create
     @review = Review.create(review_params)
-    @review.trip_id = session[:trip_id]
-    @user = User.find(session[:user_id])
-    #binding.pry
+    @city = @review.trip.city_id
     redirect_to city_path(@city)
   end
 

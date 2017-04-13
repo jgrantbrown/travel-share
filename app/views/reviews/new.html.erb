@@ -8,11 +8,16 @@
     <%= render "layouts/navbar" %>
     <div class="review-form">
       <h2>Review Form</h2>
-      <%= form_for @review, url: reviews_path,  method: :post do |f|%>
+      <%= form_for @review do |f| %>
         <%= f.label "Review" %> <br>
         <%= f.text_area :description %> <br>
+
         <%= f.label "Rating" %> <br>
         <%= f.number_field :rating %> <br> <br>
+
+        <%= f.label :trip_id %>
+        <%= f.collection_select :trip_id, @user.trips, :id, :city_name %>
+
         <%= f.submit %>
       <% end %>
     </div>
