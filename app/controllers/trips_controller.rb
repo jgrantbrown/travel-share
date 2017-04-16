@@ -31,9 +31,7 @@ class TripsController < ApplicationController
   end
 
   def update
-    byebug
     @user = User.find(params[:user_id])
-    byebug
   end
 
   def destroy
@@ -43,7 +41,7 @@ class TripsController < ApplicationController
 
   private
 
-  def trip_params
-    params.require(:trip).permit(:user_id, :city_id, :status)
-  end
+    def trip_params
+      params.require(:trip).permit(:user_id, :city_id, :status)
+    end
 end
