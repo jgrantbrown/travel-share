@@ -1,0 +1,25 @@
+30 min Goals
+
+- More review functionality
+  - navigating back to profile
+  - about page
+  - delete review
+
+- Make sign-in work
+
+- Implement bootstrap (James)
+  - Fix nav bar
+
+- Final: Push to heroku (Lauren)
+  - Custom url
+  - Hide API key
+
+- Profile (Vicky)
+  - Upload image as avatar
+
+- Clean-up
+  - Refactor
+  - Routes
+
+Beyond 30 minute goals
+- Chat functionality

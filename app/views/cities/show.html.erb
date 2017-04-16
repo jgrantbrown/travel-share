@@ -20,6 +20,13 @@
       </div>
     </div>
 
+  <%= link_to "Add Review", new_review_path %>
+  <div>
+    <% @reviews.each do |trip| %>
+      <h2><%= trip.user.username %></h2>
+      <h3><%= trip.review.rating %> - <%= trip.review.description %></h3>
+    <% end %>
+  </div>
 
     <div class="city-info">
       <h3><%= @city.description %></h3>
@@ -46,7 +53,6 @@
         <% end %>
       </div>
     </div>
-
 
   </body>
   <script>
