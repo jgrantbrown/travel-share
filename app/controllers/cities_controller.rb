@@ -37,24 +37,8 @@ class CitiesController < ApplicationController
 
   private
 
-  def city_params
-    params.require(:city).permit(:name, :latitude, :longtitude, :country, :description)
-  end
-
-  def require_login
-    return redirect_to(controller: 'sessions', action: 'new') unless logged_in?
-  end
-
-  def require_admin
-    return redirect_to(controller: 'cities', action: 'index') unless is_admin?
-  end
+    def city_params
+      params.require(:city).permit(:name, :latitude, :longtitude, :country, :description)
+    end
 
 end
-
-# def create
-#   city = City.new(city_params)
-#
-#   @city = city
-#   redirect_to city_path(@city)
-# end
-#

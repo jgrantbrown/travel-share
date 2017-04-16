@@ -2,7 +2,6 @@ class TripsController < ApplicationController
 
   def index
     @trips = Trip.all
-    #@cities = City.all
     @user = User.find(params[:user_id])
   end
 
@@ -31,19 +30,17 @@ class TripsController < ApplicationController
   end
 
   def update
-    byebug
     @user = User.find(params[:user_id])
-    byebug
   end
 
   def destroy
 
   end
 
-
   private
 
-  def trip_params
-    params.require(:trip).permit(:user_id, :city_id, :status)
-  end
+    def trip_params
+      params.require(:trip).permit(:user_id, :city_id, :status)
+    end
+  
 end

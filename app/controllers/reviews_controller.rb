@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
   end
 
   private
-      def review_params
-        params.require(:review).permit(:trip_id, :description, :rating)
-      end
-  end
+    def review_params
+      params.require(:review).permit(:trip_id, :description, :rating)
+    end
+ end

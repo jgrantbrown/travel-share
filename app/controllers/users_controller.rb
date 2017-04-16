@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-
     @user= User.find(session[:user_id])
   end
 
@@ -14,7 +13,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    #binding.pry
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)
@@ -22,7 +20,6 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
 
   def edit
     @user = User.find(params[:id])
@@ -35,7 +32,6 @@ class UsersController < ApplicationController
     @user.last_name = user_params[:last_name]
     @user.bio = user_params[:bio]
     @user.save
-    #@user.update(user_params)
     redirect_to user_path
   end
 
@@ -51,9 +47,8 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:username, :first_name,:last_name, :email, :bio, :admin, :password, :password_confirmation)
-  end
-
+    def user_params
+      params.require(:user).permit(:username, :first_name,:last_name, :email, :bio, :admin, :password, :password_confirmation)
+    end
 
 end
