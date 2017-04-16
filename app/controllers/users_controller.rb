@@ -32,7 +32,6 @@ class UsersController < ApplicationController
     @user.last_name = user_params[:last_name]
     @user.bio = user_params[:bio]
     @user.save
-    #@user.update(user_params)
     redirect_to user_path
   end
 
@@ -51,6 +50,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :first_name,:last_name, :email, :bio, :admin, :password, :password_confirmation)
     end
-
 
 end
