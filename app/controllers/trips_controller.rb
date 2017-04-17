@@ -12,12 +12,12 @@ class TripsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     params["status"].each do |city_id, status|
-      @trip = Trip.find_by(user_id: params[:user_id], city_id: city_id.to_i)
+       @trip = Trip.find_by(user_id: params[:user_id], city_id: city_id.to_i)
       if @trip
         @trip.status = status
         @trip.save
       else
-        @trip = Trip.create(user_id: params[:user_id], city_id: city_id.to_i, status: status)
+         @trip = Trip.create(user_id: params[:user_id], city_id: city_id.to_i, status: status)
       end
     end
     redirect_to user_trips_path(@user)
@@ -33,14 +33,6 @@ class TripsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  def destroy
 
-  end
 
-  private
-
-    def trip_params
-      params.require(:trip).permit(:user_id, :city_id, :status)
-    end
-  
 end
