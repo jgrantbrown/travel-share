@@ -6,7 +6,6 @@ class CitiesController < ApplicationController
   end
 
   def create
-    @user = User.find(session[:user_id])
     @city = City.new(city_params)
     if City.find_by(id: @city.id)
       render new_city_path

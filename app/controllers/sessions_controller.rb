@@ -1,10 +1,7 @@
 class SessionsController < ApplicationController
-#  before_action :require_login
-#  skip_before_action :require_login, only: [:index, :new, :create]
 
   def new
     @user = User.new
-    @users = User.all
   end
 
   def create
@@ -22,7 +19,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to '/'
   end
-
-
 
 end
