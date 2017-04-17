@@ -7,17 +7,13 @@ class CitiesController < ApplicationController
 
   def create
     @user = User.find(session[:user_id])
-    if @user.admin == true
-      @city = City.new(city_params)
-      if City.find_by(id: @city.id)
-        render new_city_path
-      else
-        @city.gather_api_city_data
-        @city.save
-        redirect_to cities_path
-      end
+    @city = City.new(city_params)
+    if City.find_by(id: @city.id)
+      render new_city_path
     else
-      redirect_to new_city_path
+      @city.gather_api_city_data
+      @city.save
+      redirect_to cities_path
     end
   end
 
@@ -37,8 +33,8 @@ class CitiesController < ApplicationController
 
   private
 
-    def city_params
-      params.require(:city).permit(:name, :latitude, :longtitude, :country, :description)
-    end
+  def city_params
+    params.require(:city).permit(:name, :latitude, :longtitude, :country, :description)
+  end
 
 end
