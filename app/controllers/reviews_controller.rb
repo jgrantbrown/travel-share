@@ -1,8 +1,5 @@
 class ReviewsController < ApplicationController
 
-  def index
-  end
-
   def new
     @review = Review.new
     @user = User.find(session[:user_id])
